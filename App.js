@@ -8,6 +8,11 @@ const Stack = createStackNavigator();
 
 export default function App() {
 
+  //Storagemanager classs 
+  //make fetching 
+  //store results 
+  //Work async then pass state to view components
+
   return (
     <View style={styles.container}>
       <NavigationContainer>
