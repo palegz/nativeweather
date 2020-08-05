@@ -12,14 +12,15 @@ export default function Home() {
   function fetchData() {
     axios.get('http://api.openweathermap.org/data/2.5/weather?q=Tampere&appid=2ccc32cc195c49726f1ee7f58a717fb6').then(resp => {
       setData(resp)
+      setLoading(false)
       console.log(resp.data);
-  });
+    });
   }
 
   useEffect(() => {
     fetchData();
     console.log(data)
-  }, [isLoading]);
+  }, []);
 
   if(isLoading){
     return(
